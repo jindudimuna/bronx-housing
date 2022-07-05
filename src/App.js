@@ -1,25 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import NavBar from './NavBar';
+import Main from './Main';
+import About from './About';
+import testimonials from './testimonials';
+import Reviews from './Reviews';
 
 function App() {
+  const reviewElements = testimonials.map(review =>{
+    return <Reviews 
+            key={review.id}
+            {...review}
+
+            />
+  })
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+<div>
+  <NavBar />
+  <Main />
+  <About />
+  <div className='reviewcontent'>
+  {reviewElements}
+  </div>
+
+</div>
+
+  )
 }
 
 export default App;

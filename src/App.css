@@ -1,38 +1,271 @@
-.App {
-  text-align: center;
+body{
+  background-color:#466174;
+}
+.link-arrow:after {
+  content: '';
+  background-size: 100% 100%;
+  width: 16px;
+  height: 12px;
+  position: absolute;
+  top: 5px;
+  right: -28px;
+  -webkit-transition: all .4s cubic-bezier(.35, 1, .33, 1);
+  transition: all .4s cubic-bezier(.35, 1, .33, 1)
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.link-arrow:hover:after {
+  right: -35px
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.link-arrow.link-arrow-white:after {
+  background-size: 100% 100%
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.link-arrow-hover:after {
+  right: -35px
+}
+
+.link {
+  display: inline-block;
+  position: relative;
+  border: none;
+  padding-bottom: 4px;
+  text-transform: uppercase;
+  font-family: Montserrat, helvetica, arial, sans-serif;
+  font-weight: 700;
+  color: #7914F9;
+}
+
+.link:active,
+.link:focus,
+.link:hover {
+  outline: 0
+}
+
+.link:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #000;
+  width: 0;
+  height: 2px;
+  -webkit-transition: all .4s cubic-bezier(.35, 1, .33, 1);
+  transition: all .4s cubic-bezier(.35, 1, .33, 1)
+}
+
+.link:hover {
+  color: #000
+}
+
+.link:hover:before {
+  width: 100%
+}
+
+.link-theme:before {
+  background: ;
+}
+
+
+.header {
+  background-color: #CCD6DE;
+  /* position: fixed; */
+  width: 90%;
+  z-index: 3;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 20px 0;
+ 
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: ;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px 4px 20px;
+  text-decoration: none;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #CCD6DE;
+}
+
+.header .logo {
+  color: #261E11;
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 2px 0px;
+  text-decoration: none;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+.main{
+  width: 80%;
+  padding: 4%;
+}
+.text{
+  font-weight: 100;
+  padding: 4%;
+  color:#CCD6DE;
+}
+
+
+form{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color:#fff;
+  padding: 3%;
 }
 
-.App-link {
-  color: #61dafb;
+/* label{
+  padding:3%;
+
+} */
+
+.photo{
+  display: flex;
+  justify-content: center;
+  padding-left:5%;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input{
+padding-right: 2%;
+border-radius: 10px;
+}
+
+.about-title{
+  /* display: flex;
+  flex-dirction:row;
+  padding: 2%; */
+
+}
+
+.about-head{
+  padding:2%;
+  color:#fff;
+}
+
+.avatar, .profile {
+  border-radius:11px;
+}
+
+.card{
+  width: 175px;
+  padding-left: 2%;
+
+  flex: 0 0 auto;
+  
+}
+p{
+  color:#CCD6DE;
+}
+section{
+  display: flex;
+ 
+  justify-content: center;
+
+}
+
+@media only screen and (max-width:414px){
+.text{
+  font-weight: 100;
+  font-size: 1.2rem;
+}
+
+.header {
+  width: 80%;
+  margin-left: 5%;
+  margin-right: 50%;
+  padding: 20px 0;
+}
+.about-title{
+  display:flex;
+  flex-dirction: column;
+}
+
+.header{
+  border-radius:10%;
+}
 }
