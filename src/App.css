@@ -1,5 +1,12 @@
+*{
+  box-sizing: border-box;
+}
+
+
 body{
-  background-color:#466174;
+  background-color:#840E34;
+  margin: 0;
+
 }
 .link-arrow:after {
   content: '';
@@ -68,12 +75,11 @@ body{
 
 
 .header {
-  background-color: #CCD6DE;
+  background-color: #fff;
   /* position: fixed; */
-  width: 90%;
+  width: 100%;
   z-index: 3;
-  margin-left: 10%;
-  margin-right: 10%;
+
   padding: 20px 0;
  
 }
@@ -181,7 +187,7 @@ body{
 }
 
 .main{
-  width: 80%;
+  width: 85%;
   padding: 4%;
 }
 .text{
@@ -190,7 +196,11 @@ body{
   color:#CCD6DE;
 }
 
+a{
+  font-weight: 100;
 
+  color:#CCD6DE; 
+}
 form{
   display: flex;
   justify-content: center;
@@ -213,18 +223,24 @@ form{
 input{
 padding-right: 2%;
 border-radius: 10px;
+height: 20px;
+weight: 80px;
 }
 
 .about-title{
-  /* display: flex;
-  flex-dirction:row;
-  padding: 2%; */
+  display: flex;
+  flex-direction: row;
+  padding: 2%;
 
 }
 
 .about-head{
   padding:2%;
   color:#fff;
+}
+.avatar{
+
+    height: 10vh;
 }
 
 .avatar, .profile {
@@ -233,8 +249,7 @@ border-radius: 10px;
 
 .card{
   width: 175px;
-  padding-left: 2%;
-
+  /* padding-left: 2%; */
   flex: 0 0 auto;
   
 }
@@ -247,6 +262,20 @@ section{
   justify-content: center;
 
 }
+footer {
+  /* place on the bottom */
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  /* width: 100%; */
+  height: 430px;
+
+  background: #252a47;
+  display: grid;
+  place-items: center;
+  /* padding: 50px; */
+}
+
 
 @media only screen and (max-width:414px){
 .text{
@@ -255,17 +284,19 @@ section{
 }
 
 .header {
-  width: 80%;
-  margin-left: 5%;
-  margin-right: 50%;
+  width: 100%;
+  border-radius: 2%;
   padding: 20px 0;
 }
 .about-title{
-  display:flex;
-  flex-dirction: column;
+  display: flex;
+  flex-direction: column;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.header{
-  border-radius:10%;
-}
+
 }

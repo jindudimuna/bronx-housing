@@ -4,6 +4,7 @@ import Main from './Main';
 import About from './About';
 import testimonials from './testimonials';
 import Reviews from './Reviews';
+import Footer from './footer';
 
 function App() {
   const reviewElements = testimonials.map(review =>{
@@ -21,6 +22,7 @@ function App() {
   <About />
   <div className='reviewcontent'>
   {reviewElements}
+  <Footer />
   </div>
 
 </div>

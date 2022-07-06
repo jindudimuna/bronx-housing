@@ -17,7 +17,7 @@ export default [
     {
         id: 3,
         remark: "I wouldn't do this journey with anyone else. There's a reason you're in my life!!",
-        name: "Marcia M." ,
+        name: "Marcia M.",
         avatar: "manuser.png",
     },
     
