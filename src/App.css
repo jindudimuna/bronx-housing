@@ -194,6 +194,8 @@ body{
   font-weight: 100;
   padding: 4%;
   color:#CCD6DE;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+
 }
 
 a{
@@ -251,7 +253,7 @@ weight: 80px;
   width: 175px;
   /* padding-left: 2%; */
   flex: 0 0 auto;
-  
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 p{
   color:#CCD6DE;
